@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Olympics Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Boostrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Monoton|Poppins&display=swap" rel="stylesheet">
+
+        <!-- MapBox JS -->
+        <script src="https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js"></script>
+
+        <!-- D3 JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+        <!-- Plotly JS-->
+
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+        <!-- Our CSS -->
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="../css/styles.css"/> -->
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        
+        <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+
+        <title>Document</title>
+        <script>
+                function initViz() {
+                var containerDiv = document.getElementById("vizContainer"),
+                    url = "https://public.tableau.com/views/OlympicData_15745317489920/Sheet1"
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            console.log("Run this code when the viz has finished loading.");
+                        }
+                    };
+        
+                var viz = new tableau.Viz(containerDiv, url, options);
+                // Create a viz object and embed it in the container div.
+            }
+        
+        </script>
+        
+    </head>
+
+    <body>
+        
+        <div id="wrapper" class="wrapper">
+
+            <header>
+                <div id="container">
+                <!-- <p><center><img src="..Olympic-image-1.png?quality=85" alt=""style="width:500px;height:300px;"allowTransparency="true"></center> -->
+                </div>
+            </header>
+          
+            <article>
+                <div class="intro">
+                    <h2><center>Our Olympics Analysis: How have the Olympics Changed Over Time?</center></h2>
+                    <h4><center>Doing an exploration of dataset on the modern Olympic Games, all the Games from Athens 1896 to Rio 2016.</center></h4>
+                    <p><center>The data we used has been scraped from www.sports-reference.com in May 2018.</center></p>
+                </div>
+                <div class="map-info">
+                    <div id="container">
+                            <p><center><img src="https://timedotcom.files.wordpress.com/2018/02/180209-olympic-medal-worth.jpg?quality=15" alt="Picture by Time.com"style="width:600px;height:325px;"></center>
+                    </div>    
+                    
+                </div>
+                <body onload="initViz();">
+                <div id="vizContainer" style="width:1255px; height:900px;"></div></body>
+
+                <aside>
+                        <div class="sidebar">
+                            <ul class="menu">
+                                <!-- <li><a href="https://public.tableau.com/profile/amy.dach#!/vizhome/OlympicBiometrics/OlympianBiometrics?publish=yes" target="_blank">Tableau_analysis</a></li> -->
+                                <li><a href="#map">Austin Map</a></li> 
+                                <li><a href="/analysis">Age Weight Height Analysis</a></li>
+                                <li><a href="/embed">Olympian Biometrics Analysis</a></li>                             </ul>
+                        </div>
+                    </aside>   
+                    <div id="map" class="map mapframe">
+                            <div class="iframeContainer">
+                                <div class="embed-responsive embed-responsive-16by9 iframe-parent">
+                                    <iframe class="embed-responsive-item iframe-child" src="{{ url_for('show_map') }}" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="#map" class="btn" id="mapsBtn">Expand</a>
+                            </div>    
+                        </div>
+                        <!-- MODALS-------------------------- -->
+        
+                <div id="maps-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog map modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span>Austin Map</span>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                <iframe src="{{ url_for('show_map') }}" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+                
+        
+        <div class="footer">
+                <div>
+                <h5><p><center>UT Austin Data Bootcamp 2019<br>Team Members: Kevin Clark, Rebekah Rowland, Amy Dach, Poonam Goel </center></p></h5>
+                </div>
+        </div>        
+
+        
+        <!--- Script for Tool Tip-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+
+    </body>
+</html>
