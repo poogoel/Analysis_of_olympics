@@ -24,7 +24,7 @@ function init() {
 
 var LeafIcon = L.Icon.extend({
   options: {
-      shadowUrl: 'leaf-shadow.png',
+      shadowUrl: 'https://github.com/Kev-clark/Project-2/blob/master/Images/leaf-shadow.png?raw=true',
       iconSize:     [38, 95],
       shadowSize:   [50, 64],
       iconAnchor:   [22, 94],
@@ -33,9 +33,9 @@ var LeafIcon = L.Icon.extend({
   }
 });
 
-var goldMedalIcon = new LeafIcon({iconUrl: '../Gold.png'}),
-    silverMedalIcon = new LeafIcon({iconUrl: '../Silver.png'}),
-    BronzeMedalIcon = new LeafIcon({iconUrl: '../Bronze.png'});
+var goldMedalIcon = new LeafIcon({iconUrl: 'https://github.com/Kev-clark/Project-2/blob/master/Images/Gold.png?raw=true'}),
+    silverMedalIcon = new LeafIcon({iconUrl: 'https://github.com/Kev-clark/Project-2/blob/master/Images/Silver.png?raw=true'}),
+    BronzeMedalIcon = new LeafIcon({iconUrl: 'https://github.com/Kev-clark/Project-2/blob/master/Images/Bronze.png?raw=true'});
 
 async function getData(sample){
 //Clear Current map HTML to reset:
