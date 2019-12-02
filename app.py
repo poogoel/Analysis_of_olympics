@@ -41,16 +41,29 @@ def index():
 def embed():
     return render_template("embed.html")
 
+
+@app.route("/analysis")
+def analysis():
+    return render_template("analysis.html")    
+
 @app.route("/games")
 def games():
     """Return a list of games."""
 
     #Query for the games
+    
     results = db.session.query(Olympics.Games.distinct().label("Games"))
     games = [row.Games for row in results.all()]
+    returngames=[]
+    for x in games:
+        if x != None:
+            returngames.append(x)
+    returngames.sort(reverse = True)
+    
+            
 
     #Return a list of the column names (games names)
-    return jsonify(games)
+    return jsonify(returngames)
 
 @app.route("/medals/<games>")
 def medals(games):
