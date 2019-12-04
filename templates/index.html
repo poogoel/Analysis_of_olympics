@@ -20,7 +20,7 @@
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
         <!-- Our CSS -->
-        <link rel="stylesheet" type="text/css" media="screen" href="../static/css/styles.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="../static/css/style.css"/>
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         
@@ -28,7 +28,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
 
-        <title>Document</title>
         <script>
                 function initViz() {
                 var containerDiv = document.getElementById("vizContainer"),
@@ -48,15 +47,15 @@
         
     </head>
 
-    <body>
+    <body onload="initViz();">
         
         <div id="wrapper" class="wrapper">
 
             <header>
-                <p><center><img src="https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/Olympic-image-1.png?raw=true" alt=""style="width:500px;height:300px;allowTransparency="true></center> 
+                <p><center><img src="https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/Olympic-image-1.png?raw=true" alt="" style="width:1000px;height:260px;"></center> </p>
                 
             </header>
-
+            
             <aside>
                 <div class="sidebar">
                     <ul class="menu">
@@ -69,16 +68,17 @@
             </aside>
             <article>
                 <div class="intro">
-                    <h2><center>Our Olympics Analysis: How have the Olympics Changed Over Time?</center></h2>
-                    <h4><center>Doing an exploration of dataset on the modern Olympic Games, all the Games from Athens 1896 to Rio 2016.</center></h4>
-                    <p><center>The data we used has been scraped from www.sports-reference.com in May 2018.</center></p>
+                    <h2> How have the Olympics Changed Over Time? </h2>
+                    <h4> Doing an exploration of dataset on the modern Olympic Games </h4>
+                    <h4> of all the Games from Athens 1896 to Rio 2016. </h4>
+                    <p> The data we used has been scraped from www.sports-reference.com in May 2018. </p>
                 </div>
                 <div class="map-info">
-                     <p><center><img src="https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/180209-olympic-medal-worth.jpg?raw=true" alt="Picture by Time.com"style="width:600px;height:325px;"allowTransparency=true"></center>
+                     <p> <img src="https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/180209-olympic-medal-worth.jpg?raw=true" alt="Picture by Time.com" style="width:950px;height:325px;"> </p>
                 </div>  
                 
-                <body onload="initViz();">
-                    <div id="vizContainer" style="width:1255px; height:900px;"></div></body>
+                
+                    <div id="vizContainer" style="width:1255px; height:900px;"></div>
                     
                 <div id="map" class="map mapframe">
                         <div class="embed-responsive embed-responsive-16by9 iframe-parent">
@@ -92,7 +92,7 @@
         
        <div class="footer">
                 <div>
-                <h5><p><center>UT Austin Data Bootcamp 2019<br>Team Members: Kevin Clark, Rebekah Rowland, Amy Dach, Poonam Goel </center></p></h5>
+                <p>UT Austin Data Bootcamp 2019<br>Team Members: Kevin Clark, Rebekah Rowland, Amy Dach, Poonam Goel</p>
                 </div>
         </div>        
 

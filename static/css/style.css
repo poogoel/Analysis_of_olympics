@@ -1,19 +1,33 @@
-/* body, html {
+/* remove default margin and padding from body */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* set map, body, and html to 100% of the screen size */
+#map,
+body,
+html {
+  height: 100%;
+}/* body, html {
     padding: 0;
     margin: 0;
     margin-top: -15px;
     background: rgb(201, 207, 212);
     height: 100%;
 }
+
 .picheader { */
     /* display: flex; */
     /* background: url('../css/images/header.jpg') center no-repeat; */
     /* background-size: cover;
 }
+
 .iframeContainer { */
     /* padding: 1px; */
     /* border: 1px solid #e3e3e3;
 }
+
 .modal-dialog .map { */
     /* width: 950px; */
     /* margin: auto;
@@ -49,21 +63,20 @@ h3 {  box-sizing: border-box;
 
 header {
   grid-area: header;
-  background: url('../css/images/header.jpg') center no-repeat;
+  /* background: url('https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/Olympic-image-1.png') center no-repeat; */
   background-size: cover;
 }
 
 aside {
   grid-area: aside;
-  background: url('../css/images/stripes.jpg') center no-repeat;
+  /* background: url('../css/images/stripes.jpg') center no-repeat; */
   background-size: cover;
-  
 }
 
 article {
   grid-area: article;
   padding: 40px;
-  /* background: rgb(236, 122, 198); */
+  background: rgb(122, 236, 221);
 }
 
 footer {
@@ -80,7 +93,7 @@ footer p{
   display: grid;
   grid-template-columns: 0.5fr 3fr;
   grid-template-rows: 250px auto;
-  grid-template-areas: 
+  grid-template-areas:
       "header header"
       "aside article"
       'aside footer';
@@ -186,7 +199,7 @@ header {
   }
 
   aside {
-      background: url('../css/images/stripesh.jpg') center no-repeat;
+      /* background: url('../css/images/stripesh.jpg') center no-repeat; */
       background-size: cover;
   }
 
@@ -255,7 +268,7 @@ header {
   text-decoration: none;
   /* text-shadow: 0.5px 1px 1px rgb(15, 4, 165); */
   color: rgb(251, 250, 252);
-  background: rgb(248, 124, 192);
+  background: rgb(122, 236, 221);
   border-radius: 5px;
   padding: 0 5px;
   margin: 0 15px;
@@ -307,4 +320,9 @@ header {
 
 .map-info, .map, .tweets, .crimes {
   padding-bottom: 50px;
+}
+
+
+h1 {
+  text-align: center;
 }
