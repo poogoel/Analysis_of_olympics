@@ -63,7 +63,7 @@ h3 {  box-sizing: border-box;
 
 header {
   grid-area: header;
-  /* background: url('https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/Olympic-image-1.png') center no-repeat; */
+  /* background: url('https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/The_Organisation/The-Olympic-Rings/Olympic_rings_TM_c_IOC_All_rights_reserved_1.jpg?interpolation=lanczos-none&resize=1400:*') center no-repeat; */
   background-size: cover;
 }
 
@@ -76,7 +76,7 @@ aside {
 article {
   grid-area: article;
   padding: 40px;
-  background: rgb(122, 236, 221);
+  background: rgb(122, 200, 236);
 }
 
 footer {
@@ -86,7 +86,8 @@ footer {
 }
 
 footer p{
-  font-size: 15px;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .wrapper {
@@ -116,8 +117,8 @@ footer p{
 header {
   display: grid;
   grid-template-columns: 1fr 3fr 1.5fr;
-  grid-template-areas:
-      "clock empty-header weather";
+  /* grid-template-areas:
+      "clock empty-header weather"; */
 }
 
 /* MAIN ARTICLE LAYOUT------------------------------------------------ */
@@ -170,8 +171,8 @@ header {
   header {
       display: grid;
       grid-template-columns: 1fr 3fr 1.5fr;
-      grid-template-areas:
-          "clock empty-header weather";
+      /* grid-template-areas:
+          "clock empty-header weather"; */
   }
 }
 
@@ -278,7 +279,7 @@ header {
 }
 
 .menu li a:hover, #mapsBtn:hover, #entBtn:hover, #liqBtn:hover {
-  background: rgba(110, 12, 248, 0.705);
+  background: rgba(12, 28, 248, 0.705);
   /* cursor: pointer; */
 }
 
@@ -294,12 +295,8 @@ header {
 
 .iframeContainer {
   box-shadow: -1px 3px 6px 0px rgb(176, 196, 226), 1px -1px 3px 0px rgb(218, 234, 248), 3px 3px 6px 0px rgb(177, 175, 177), -1px -1px 3px 0px rgb(221, 221, 221);
-  border: 0.1px, solid;
-  border-radius: 7px;
-}
-
-.mapsframe, .tweetsframe {
-  padding: 10px;
+  border: 1.5px, solid;
+  border-radius: 15px;
 }
 
 .buttons-under {
@@ -318,7 +315,7 @@ header {
   -webkit-overflow-scrolling: touch;
 }
 
-.map-info, .map, .tweets, .crimes {
+.map-info, .map {
   padding-bottom: 50px;
 }
 

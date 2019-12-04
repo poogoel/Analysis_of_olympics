@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Austin Dashboard</title>
+        <title>Olympic's Data Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
         <!-- Boostrap CSS -->
@@ -51,11 +51,10 @@
         
         <div id="wrapper" class="wrapper">
 
-            <header>
-                <p><center><img src="https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/Olympic-image-1.png?raw=true" alt="" style="width:1000px;height:260px;"></center> </p>
+             <header>
+                <p><center><img src="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/The_Organisation/The-Olympic-Rings/Olympic_rings_TM_c_IOC_All_rights_reserved_1.jpg?interpolation=lanczos-none&resize=1400:*" alt="" style="width:700px;height:300px;"></center> </p> 
                 
-            </header>
-            
+             </header> 
             <aside>
                 <div class="sidebar">
                     <ul class="menu">
@@ -68,23 +67,22 @@
             </aside>
             <article>
                 <div class="intro">
-                    <h2> How have the Olympics Changed Over Time? </h2>
-                    <h4> Doing an exploration of dataset on the modern Olympic Games </h4>
-                    <h4> of all the Games from Athens 1896 to Rio 2016. </h4>
-                    <p> The data we used has been scraped from www.sports-reference.com in May 2018. </p>
+                    <h3> How have the Olympics Changed? </h3>
+                    <h4> Doing an exploration of dataset on games from Athens to Rio 2016. </h4>
                 </div>
-                <div class="map-info">
-                     <p> <img src="https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/180209-olympic-medal-worth.jpg?raw=true" alt="Picture by Time.com" style="width:950px;height:325px;"> </p>
+                <div class="map-info">        
+                    <p><center> <img src="https://github.com/poogoel/Analysis_of_olympics/blob/master/Images/180209-olympic-medal-worth.jpg?raw=true" alt="Picture by Time.com" style="width:500px;height:225px;"></center> </p>
                 </div>  
                 
                 
-                    <div id="vizContainer" style="width:1255px; height:900px;"></div>
+                    <div id="vizContainer" style="width:1000px; height:600px;"></div>
                     
                 <div id="map" class="map mapframe">
                         <div class="embed-responsive embed-responsive-16by9 iframe-parent">
                           <iframe class="embed-responsive-item iframe-child" src="{{ url_for('show_map') }}" allowfullscreen></iframe>
                         </div>
-                </div>    
+                </div> 
+                <p> The data we used has been scraped from www.sports-reference.com in May 2018. </p>   
             </article>
                             
         </div>
